@@ -22,7 +22,7 @@ public class Kahoot
 	}
 	public String toString()
 	{
-		String description = "This Kahoot was made by " + creator + "and has " + questionCount + " questions";
+		String description = "This Kahoot was made by " + creator + " and has " + questionCount + " questions";
 		
 		return description;
 	}
