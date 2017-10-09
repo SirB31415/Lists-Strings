@@ -77,12 +77,12 @@ public class ListController
 		popup.displayText("The current list size is: " + myKahoots.size());
 		Kahoot removed = myKahoots.remove(3);
 		popup.displayText("I removed the kahoot by " + removed.getCreator());
-		popup.displayText("The list now has: " + myKahoots.size() + "items inside");
+		popup.displayText("The list now has: " + myKahoots.size() + " items inside");
 		myKahoots.add(0, removed);
 		
-		popup.displayText("The list is still" + myKahoots.size() + " items big");
+		popup.displayText("The list is still " + myKahoots.size() + " items big");
 		removed = myKahoots.set(2, new Kahoot());
-		popup.displayText("The kahoot by " + removed.getCreator() + "was replaced with on by: " + myKahoots.get(2).getCreator());
+		popup.displayText("The kahoot by " + removed.getCreator() + " was replaced with on by: " + myKahoots.get(2).getCreator());
 		
 	}
 	private void practiceWithLists()
