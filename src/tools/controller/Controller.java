@@ -1,17 +1,17 @@
-package list.controller;
+package tools.controller;
 
 import java.util.List;
 import java.util.ArrayList;
 import list.model.Kahoot;
 import list.view.PopupDisplay;
 
-public class ListController
+public class Controller
 {
 	private List<Kahoot> myKahoots;
 	private PopupDisplay popup;
 	
 	
-	public ListController()
+	public Controller()
 	{
 		myKahoots = new ArrayList<Kahoot>();
 		popup = new PopupDisplay();
@@ -92,5 +92,13 @@ public class ListController
 		String response = popup.getResponse("Which list item would you like to delete? (0-6)");
 		int r3sponse = Integer.parseInt(response);
 		Kahoot xtraRemoved = myKahoots.remove(r3sponse);
+	}
+	public PopupDisplay getPopup()
+	{
+		return popup;
+	}
+	public ArrayList<Kahoot> getMyKahoots()
+	{
+		return (ArrayList<Kahoot>) myKahoots;
 	}
 }
