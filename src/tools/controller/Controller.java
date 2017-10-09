@@ -24,6 +24,7 @@ public class Controller
 		fillTheList();
 //		showTheList();
 		changeTheList();
+		practiceWithLists();
 	}
 	private void showTheList()
 	{
@@ -92,6 +93,7 @@ public class Controller
 		String response = popup.getResponse("Which list item would you like to delete? (0-6)");
 		int r3sponse = Integer.parseInt(response);
 		Kahoot xtraRemoved = myKahoots.remove(r3sponse);
+		popup.displayText("OMG, why did you delete " + xtraRemoved.getCreator() + "'s stuff?");
 	}
 	public PopupDisplay getPopup()
 	{
