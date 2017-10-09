@@ -22,7 +22,8 @@ public class ListController
 		Kahoot myFirstKahoot = new Kahoot();
 		myKahoots.add(myFirstKahoot);
 		fillTheList();
-		showTheList();
+//		showTheList();
+		changeTheList();
 	}
 	private void showTheList()
 	{
@@ -63,12 +64,33 @@ public class ListController
 		Kahoot animalColor = new Kahoot("Branton", 10, "All of the colors of animals");
 		Kahoot presidents = new Kahoot("Obama", 44, "The 44th president of the US");
 		
-		myKahoots.add(fiftyStates);
-		myKahoots.add(mySecondKahoot);
-		myKahoots.add(bigQuiz);
-		myKahoots.add(animalColor);
-		myKahoots.add(animalColor);
-		myKahoots.add(presidents);
+		myKahoots.add(0, fiftyStates);
+		myKahoots.add(1, mySecondKahoot);
+		myKahoots.add(2, bigQuiz);
+		myKahoots.add(3, animalColor);
+		myKahoots.add(4, animalColor);
+		myKahoots.add(5, presidents);
 		
+	}
+	private void changeTheList()
+	{
+		popup.displayText("The current list size is: " + myKahoots.size());
+		Kahoot removed = myKahoots.remove(3);
+		popup.displayText("I removed the kahoot by " + removed.getCreator());
+		popup.displayText("The list now has: " + myKahoots.size() + "items inside");
+		myKahoots.add(0, removed);
+		
+		popup.displayText("The list is still" + myKahoots.size() + " items big");
+		removed = myKahoots.set(2, new Kahoot());
+		popup.displayText("The kahoot by " + removed.getCreator() + "was replaced with on by: " + myKahoots.get(2).getCreator());
+		
+	}
+	private void practiceWithLists()
+	{
+		Kahoot diogenes = new Kahoot("Alex", 1, "The greatest roast of the 'Great'");
+		myKahoots.add(6, diogenes);
+		String response = popup.getResponse("Which list item would you like to delete? (0-6)");
+		int r3sponse = Integer.parseInt(response);
+		Kahoot xtraRemoved = myKahoots.remove(r3sponse);
 	}
 }
