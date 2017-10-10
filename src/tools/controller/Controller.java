@@ -90,7 +90,7 @@ public class Controller
 	{
 		Kahoot diogenes = new Kahoot("Alex", 1, "The greatest roast of the 'Great'");
 		myKahoots.add(6, diogenes);
-		String response = popup.getResponse("Which list item would you like to delete? (0-6)");
+		String response = popup.getResponse("Which list item would you like to delete? (1-7)");
 		int r3sponse = Integer.parseInt(response);
 		Kahoot xtraRemoved = myKahoots.remove(r3sponse);
 		popup.displayText("OMG, why did you delete " + xtraRemoved.getCreator() + "'s stuff?");
