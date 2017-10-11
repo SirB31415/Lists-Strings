@@ -2,8 +2,9 @@ package tools.controller;
 
 import java.util.List;
 import java.util.ArrayList;
-import list.model.Kahoot;
-import list.view.PopupDisplay;
+
+import tools.model.Kahoot;
+import tools.view.PopupDisplay;
 
 public class Controller
 {
